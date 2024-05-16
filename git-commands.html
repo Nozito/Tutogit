@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to use Git?</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .bandeau {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-image: url('img/install-git.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+        }
+
+        .bandeau h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .section-title {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-section {
+            margin-bottom: 2rem;
+        }
+
+        code {
+            display: block;
+            background: #f8f9fa;
+            padding: 0.75rem;
+            border-radius: 0.25rem;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            margin-top: 2rem;
+            padding: 1rem 0;
+            background: #343a40;
+            color: white;
+            text-align: center;
+        }
+
+        footer a {
+            color: #adb5bd;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Début de la barre de navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid justify-content-center">
+            <a class="navbar-brand" href="index.html">How to use Git?</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="git-commands.html">Commands Git</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="github.html">Github</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="githubdesktop.html">Github Desktop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vsc.html">Visual Studio Code</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Fin de la barre de navigation -->
+
+    <!-- Bandeau Section -->
+    <div class="bandeau">
+        <h1>Commandes GIT</h1>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="content-section">
+                    <h2 class="section-title text-center">Installation de Git et Configuration</h2>
+                    <p>Pour faire l'installation de Git, vous devez exécuter les commandes suivantes :</p>
+                    <code>sudo apt install git</code>
+                    <p>Pour configurer les préférences de l’utilisateur, utilisez la commande suivante :</p>
+                    <code>git config --global user.email "votre.email@example.com"</code>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-title text-center">Git init</h2>
+                    <p>Cette commande est utilisée pour créer un nouveau dépôt GIT :</p>
+                    <code>git init</code>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-title text-center">Git add</h2>
+                    <p>La commande git add peut être utilisée pour ajouter des fichiers à l’index :</p>
+                    <code>git add temp.txt</code>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-title text-center">Git clone</h2>
+                    <p>La commande git clone est utilisée pour la vérification des dépôts :</p>
+                    <code>git clone alex@93.188.160.58:/chemin/vers/dépôt</code>
+                    <p>Pour créer une copie de travail d’un dépôt local :</p>
+                    <code>git clone /chemin/vers/dépôt</code>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-title text-center">Git commit</h2>
+                    <p>La commande git commit permet de valider les modifications apportées au HEAD :</p>
+                    <code>git commit -m "Description du commit"</code>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-title text-center">Git status</h2>
+                    <p>La commande git status affiche la liste des fichiers modifiés :</p>
+                    <code>git status</code>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-title text-center">Git reset</h2>
+                    <p>Pour réinitialiser l’index et le répertoire de travail à l’état du dernier commit :</p>
+                    <code>git reset --hard HEAD</code>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-title text-center">Git rm</h2>
+                    <p>Git rm peut être utilisé pour supprimer des fichiers de l’index et du répertoire de travail :</p>
+                    <code>git rm nomfichier.txt</code>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-title text-center">Git stash</h2>
+                    <p>La commande git stash aide à enregistrer les changements temporairement :</p>
+                    <code>git stash</code>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-title text-center">Git show</h2>
+                    <p>Pour afficher des informations sur tout fichier git :</p>
+                    <code>git show</code>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-title text-center">Git fetch</h2>
+                    <p>Git fetch permet d’extraire tous les fichiers du dépôt distant :</p>
+                    <code>git fetch origin</code>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-title text-center">Git grep</h2>
+                    <p>Git grep permet de rechercher des expressions dans les arbres de contenu :</p>
+                    <code>git grep "www.hostinger.com"</code>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-title text-center">Git rebase</h2>
+                    <p>La commande git rebase est utilisée pour la réapplication des commits sur une autre branche :</p>
+                    <code>git rebase master</code>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 Noah & Antony, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

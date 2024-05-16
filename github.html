@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to use Git ?</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bandeau {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-image: url('img/install-git.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+        }
+
+        .bandeau h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .section-title {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-section {
+            margin-bottom: 2rem;
+        }
+
+        code {
+            display: block;
+            background: #f8f9fa;
+            padding: 0.75rem;
+            border-radius: 0.25rem;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            margin-top: 2rem;
+            padding: 1rem 0;
+            background: #343a40;
+            color: white;
+            text-align: center;
+        }
+
+        footer a {
+            color: #adb5bd;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Début de la barre de navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid justify-content-center">
+            <a class="navbar-brand" href="index.html">How to use Git ?</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="git-commands.html">Commands Git</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="github.html">Github</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="githubdesktop.html">Github Desktop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vsc.html">Visual Studio Code</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Fin de la barre de navigation -->
+
+     <!-- Bandeau Section -->
+     <div class="bandeau">
+        <h1>Github et GIT</h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <img src="img/Githublogo.png" alt="logo GitHub" class="img-fluid mx-auto d-block" style="max-width: 200px;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <h1>Github</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-8 col-lg-6">
+                <p>Dans cette première leçon, nous allons définir précisément ce que sont Git et GitHub afin d’éviter des confusions plus tard. Nous allons également comprendre pourquoi Git est si populaire et pourquoi les systèmes de gestion de version sont incontournables aujourd’hui.</p>
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-8 col-lg-6 text-center">
+                <h3>Qu’est-ce que Git ?</h3>
+            </div>
+        </div>
+        <hr class="featurette-divider">
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-8 col-lg-6">
+                <p>Git est un logiciel de versioning créé en 2005 par Linus Torvalds, le créateur de Linux.</p>
+                <p>Un logiciel de versioning, ou logiciel de gestion de version est un logiciel qui permet de conserver un historique des modifications effectuées sur un projet afin de pouvoir rapidement identifier les changements effectués et de revenir à une ancienne version en cas de problème.</p>
+                <p>Les logiciels de gestion de versions sont quasiment incontournables aujourd’hui car ils facilitent grandement la gestion de projets et car ils permettent de travailler en équipe de manière beaucoup plus efficace.</p>
+                <p>Parmi les logiciels de gestion de versions, Git est le leader incontesté et il est donc indispensable pour tout développeur de savoir utiliser Git.</p>
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-8 col-lg-6 text-center">
+                <h3>A quoi sert concrètement un système de gestion de version ?</h3>
+            </div>
+        </div>
+        <hr class="featurette-divider">
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-8 col-lg-6">
+                <p>Imaginez que vous possédiez un site web. A chaque fois que vous voulez modifier quelque chose sur le site ou tester une fonctionnalité, vous êtes obligé d’effectuer une sauvegarde du site avant l’implémentation afin de pouvoir le restaurer si quelque chose se passe mal.</p>
+                <p>Jusqu’ici, le procédé est contraignant car vous allez devoir effectuer une sauvegarde complète et restaurer la sauvegarde en cas de problème mais cela ne semble pas très complexe ni insurmontable.</p>
+                <p>Imaginez maintenant que vous soyez 10 à travailler sur le même site web, en vous occupant chacun de développer des fonctionnalités différentes mais qui peuvent être liées entre elles. L’organisation du travail est ici beaucoup plus complexe puisqu’il va falloir s’assurer :</p>
+                <ul>
+                    <li>Que les fonctionnalités sur lesquelles travaille un développeur ne rentrent pas en conflit avec les fonctionnalités sur lesquelles travaillent les autres développeurs ;</li>
+                    <li>Que chaque développeur sache sur quoi travaillent les autres développeurs afin de travailler correctement ;</li>
+                    <li>Que chaque développeur possède une version actualisée du site pour tester et implémenter ses fonctionnalités.</li>
+                </ul>
+                <p>Ici, l’idée la plus logique serait de mettre en place un serveur distant qui contiendrait l’historique des modifications faites par chaque développeur afin que chacun ait accès aux avancées des autres. Chaque développeur pourrait également copier l’intégralité du contenu du serveur pour travailler en local sur sa machine. On vient ainsi de créer un système de gestion de version décentralisé rudimentaire.</p>
+                <p>Grosso-modo, les logiciels de versioning et Git en particulier vont nous permettre d’effectuer ces opérations mais de manière beaucoup plus robuste et avec de nombreuses fonctionnalités supplémentaires très utiles (possibilité de synchroniser son dossier local avec le serveur, connexion aux autres projets et mise à jour des différences automatisée, etc.</p>
+                <p>Git permet de coordonner le travail entre plusieurs personnes en conservant un historique des changements effectués sur des fichiers.</p>
+                <p>Git permet à différentes versions d’un même fichier de coexister. Les développeurs travaillant avec Git ont accès à l’historique des modifications pour l’intégralité du projet et peuvent ainsi savoir quels changements ont été faits par rapport à leur version des fichiers, qui a fait ces changements, etc.</p>
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-8 col-lg-6 text-center">
+                <h3>Les deux modèles des logiciels de gestion de version : modèle centralisé vs modèle décentralisé</h3>
+            </div>
+        </div>
+        <hr class="featurette-divider">
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-8 col-lg-6">
+                <p>Les logiciels de gestion de version sont aujourd’hui tous construits sur l’un des deux modèles suivants : le modèle centralisé ou le modèle décentralisé encore appelé modèle distribué.</p>
+                <p>Le principe de base d’un modèle centralisé est la centralisation du code source lié au projet : la source du code du projet est hébergé sur un serveur distant central et les différents utilisateurs doivent se connecter à ce serveur pour travailler sur ce code.</p>
+                <p>Dans un modèle distribué, le principe de base est opposé : le code source du projet est toujours hébergé sur un serveur distant mais chaque utilisateur est invité à télécharger et à héberger l’intégralité du code source du projet sur sa propre machine.</p>
+                <p>Le modèle distribué a été popularisé par Git et présente différents avantages notables par rapport au modèle centralisé :</p>
+                <ul>
+                    <li>Simplicité / flexibilité du travail : Comme chaque utilisateur peut héberger le code du projet, on n’a plus besoin d’être constamment connecté à un serveur central et on peut donc travailler en ligne sur sa propre machine ;</li>
+                    <li>Sécurité : Comme chaque utilisateur possède le code complet d’un projet, on peut utiliser la copie du projet d’un utilisateur comme back-up en cas de corruption du serveur central.</li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-8 col-lg-6 text-center">
+                <h3>Qu’est-ce que GitHub ?</h3>
+            </div>
+        </div>
+        <hr class="featurette-divider">
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-8 col-lg-6">
+                <p>Git est un logiciel de gestion de version. Git va nous permettre d’enregistrer les différentes modifications effectuées sur un projet et de pouvoir retourner à une version précédente du projet.</p>
+                <p>Dans le langage des systèmes de gestion de version, la copie de l’intégralité des fichiers d’un projet et de leur version située sur le serveur central est appelé un dépôt. Git appelle également cela “repository” ou “repo” en abrégé.</p>
+                <p>GitHub est un service en ligne qui permet d’héberger des dépôts ou repo Git. C’est le plus grand hébergeur de dépôts Git du monde.</p>
+                <p>Une grande partie des dépôts hébergés sur GitHub sont publics, ce qui signifie que n’importe qui peut télécharger le code de ces dépôts et contribuer à leur développement en proposant de nouvelles fonctionnalités.</p>
+                <p>Pour récapituler, et afin d’être bien clair sur ce point : Git est un logiciel de gestion de version tandis que GitHub est un service en ligne d’hébergement de dépôts Git qui fait office de serveur central pour ces dépôts.</p>
+                <p>Nous verrons comment utiliser GitHub en détail dans ce cours après avoir appris à utiliser Git.</p>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 Noah&Antony, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+
+</html>
