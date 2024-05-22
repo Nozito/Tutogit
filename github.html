@@ -60,6 +60,10 @@
             color: #adb5bd;
             text-decoration: none;
         }
+
+        .text-justify {
+            text-align: justify;
+        }
     </style>
 </head>
 
@@ -68,7 +72,9 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid justify-content-center">
             <a class="navbar-brand" href="index.html">How to use Git ?</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -94,24 +100,24 @@
     </nav>
     <!-- Fin de la barre de navigation -->
 
-     <!-- Bandeau Section -->
-     <div class="bandeau">
+    <!-- Bandeau Section -->
+    <div class="bandeau">
         <h1>Github et GIT</h1>
     </div>
 
     <div class="container">
         <div class="row">
-            <div class="col-12 d-flex justify-content-center">
+            <div class="col-12 text-center">
                 <img src="img/Githublogo.png" alt="logo GitHub" class="img-fluid mx-auto d-block" style="max-width: 200px;">
             </div>
         </div>
         <div class="row">
-            <div class="col-12 d-flex justify-content-center">
+            <div class="col-12 text-center">
                 <h1>Github</h1>
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-10 col-md-8 col-lg-6">
+            <div class="col-10 col-md-8 col-lg-6 text-justify">
                 <p>Dans cette première leçon, nous allons définir précisément ce que sont Git et GitHub afin d’éviter des confusions plus tard. Nous allons également comprendre pourquoi Git est si populaire et pourquoi les systèmes de gestion de version sont incontournables aujourd’hui.</p>
             </div>
         </div>
@@ -123,7 +129,7 @@
         </div>
         <hr class="featurette-divider">
         <div class="row justify-content-center">
-            <div class="col-10 col-md-8 col-lg-6">
+            <div class="col-10 col-md-8 col-lg-6 text-justify">
                 <p>Git est un logiciel de versioning créé en 2005 par Linus Torvalds, le créateur de Linux.</p>
                 <p>Un logiciel de versioning, ou logiciel de gestion de version est un logiciel qui permet de conserver un historique des modifications effectuées sur un projet afin de pouvoir rapidement identifier les changements effectués et de revenir à une ancienne version en cas de problème.</p>
                 <p>Les logiciels de gestion de versions sont quasiment incontournables aujourd’hui car ils facilitent grandement la gestion de projets et car ils permettent de travailler en équipe de manière beaucoup plus efficace.</p>
@@ -138,7 +144,7 @@
         </div>
         <hr class="featurette-divider">
         <div class="row justify-content-center">
-            <div class="col-10 col-md-8 col-lg-6">
+            <div class="col-10 col-md-8 col-lg-6 text-justify">
                 <p>Imaginez que vous possédiez un site web. A chaque fois que vous voulez modifier quelque chose sur le site ou tester une fonctionnalité, vous êtes obligé d’effectuer une sauvegarde du site avant l’implémentation afin de pouvoir le restaurer si quelque chose se passe mal.</p>
                 <p>Jusqu’ici, le procédé est contraignant car vous allez devoir effectuer une sauvegarde complète et restaurer la sauvegarde en cas de problème mais cela ne semble pas très complexe ni insurmontable.</p>
                 <p>Imaginez maintenant que vous soyez 10 à travailler sur le même site web, en vous occupant chacun de développer des fonctionnalités différentes mais qui peuvent être liées entre elles. L’organisation du travail est ici beaucoup plus complexe puisqu’il va falloir s’assurer :</p>
@@ -156,23 +162,22 @@
         <br>
         <div class="row justify-content-center">
             <div class="col-10 col-md-8 col-lg-6 text-center">
-                <h3>Les deux modèles des logiciels de gestion de version : modèle centralisé vs modèle décentralisé</h3>
+                <h3>Les deux modèles des logiciels de versioning</h3>
             </div>
         </div>
         <hr class="featurette-divider">
         <div class="row justify-content-center">
-            <div class="col-10 col-md-8 col-lg-6">
-                <p>Les logiciels de gestion de version sont aujourd’hui tous construits sur l’un des deux modèles suivants : le modèle centralisé ou le modèle décentralisé encore appelé modèle distribué.</p>
-                <p>Le principe de base d’un modèle centralisé est la centralisation du code source lié au projet : la source du code du projet est hébergé sur un serveur distant central et les différents utilisateurs doivent se connecter à ce serveur pour travailler sur ce code.</p>
-                <p>Dans un modèle distribué, le principe de base est opposé : le code source du projet est toujours hébergé sur un serveur distant mais chaque utilisateur est invité à télécharger et à héberger l’intégralité du code source du projet sur sa propre machine.</p>
-                <p>Le modèle distribué a été popularisé par Git et présente différents avantages notables par rapport au modèle centralisé :</p>
+            <div class="col-10 col-md-8 col-lg-6 text-justify">
+                <p>On distingue deux modèles de logiciels de versioning :</p>
                 <ul>
-                    <li>Simplicité / flexibilité du travail : Comme chaque utilisateur peut héberger le code du projet, on n’a plus besoin d’être constamment connecté à un serveur central et on peut donc travailler en ligne sur sa propre machine ;</li>
-                    <li>Sécurité : Comme chaque utilisateur possède le code complet d’un projet, on peut utiliser la copie du projet d’un utilisateur comme back-up en cas de corruption du serveur central.</li>
+                    <li>Les logiciels centralisés : ces logiciels sont les premiers logiciels de versioning créés. Ils reposent sur un serveur unique qui contient l’historique des modifications et la version actuelle du projet. Les développeurs doivent être connectés au serveur pour soumettre leurs modifications et récupérer les modifications des autres.</li>
+                    <li>Les logiciels décentralisés : ces logiciels sont plus récents et permettent à chaque développeur de posséder une copie complète de l’historique et de la version actuelle du projet sur sa propre machine. Les développeurs peuvent ainsi travailler en local et synchroniser leurs modifications avec les autres développeurs lorsqu’ils sont connectés.</li>
                 </ul>
+                <p>Git est un logiciel de versioning décentralisé, ce qui lui permet d’être très flexible et performant, notamment pour les projets de grande envergure avec de nombreux développeurs.</p>
             </div>
         </div>
-        <br>
+    </div>
+    <div class="container">
         <div class="row justify-content-center">
             <div class="col-10 col-md-8 col-lg-6 text-center">
                 <h3>Qu’est-ce que GitHub ?</h3>
@@ -180,7 +185,7 @@
         </div>
         <hr class="featurette-divider">
         <div class="row justify-content-center">
-            <div class="col-10 col-md-8 col-lg-6">
+            <div class="col-10 col-md-8 col-lg-6 text-justify">
                 <p>Git est un logiciel de gestion de version. Git va nous permettre d’enregistrer les différentes modifications effectuées sur un projet et de pouvoir retourner à une version précédente du projet.</p>
                 <p>Dans le langage des systèmes de gestion de version, la copie de l’intégralité des fichiers d’un projet et de leur version située sur le serveur central est appelé un dépôt. Git appelle également cela “repository” ou “repo” en abrégé.</p>
                 <p>GitHub est un service en ligne qui permet d’héberger des dépôts ou repo Git. C’est le plus grand hébergeur de dépôts Git du monde.</p>
@@ -189,16 +194,101 @@
                 <p>Nous verrons comment utiliser GitHub en détail dans ce cours après avoir appris à utiliser Git.</p>
             </div>
         </div>
-    </div>
-    <!-- FOOTER -->
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-8 col-lg-6 text-center">
+                <h3>Interface et Menu sur GitHub</h3>
+            </div>
+        </div>
+        <hr class="featurette-divider">
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-8 col-lg-6 text-center">
+                <h4>1. Codes</h4>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-8 col-lg-9 text-justify">
+                <img src="img/pcode.png" alt="Menu d'un projet GitHub" class="img-fluid mx-auto d-block" style="max-width: 860px;">
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-8 col-lg-6 text-justify">
+                <p>La page code permet de retrouver l'ensemble des éléments d'une branche. Vous pouvez retrouver le readme, que vous pouvez modifier depuis GitHub. Il est possible de télécharger l'ensemble des fichiers du projet en cliquant sur le bouton "Code". En appuyant sur "main" ou sur "branches", vous pouvez consulter les éléments présents dans vos branches ou vous pourrez aussi en créer.</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-8 col-lg-6 text-center">
+                <h4>2. Issues</h4>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-8 col-lg-9 text-center">
+                <img src="img/issus.png" alt="Issues d'un projet GitHub" class="img-fluid mx-auto d-block" style="max-width: 860px;">
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-8 col-lg-6 text-justify">
+                <p>La page Issues permet d'ajouter des issues visibles par tous les utilisateurs intégrés au projet. Une fois ajoutée, cela vous crée une branche sur l'issue. Et pour la clôturer, il suffit de commit et push votre travail.</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-8 col-lg-6 text-center">
+                <h4>3. Pull Request</h4>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-8 col-lg-9 text-center">
+                <img src="img/pullreq.png" alt="Pull request d'un projet GitHub" class="img-fluid mx-auto d-block" style="max-width: 860px;">
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-8 col-lg-6 text-justify">
+                <p>La page Pull Request permet d'envoyer toutes les pull requests ici pour qu'elles puissent être commentées et vues par tous les utilisateurs.</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-8 col-lg-6 text-center">
+                <h4>4. Projects</h4>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-8 col-lg-9 text-center">
+                <img src="img/projects.png" alt="Projet d'un projet GitHub" class="img-fluid mx-auto d-block" style="max-width: 860px;">
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-8 col-lg-6 text-justify">
+                <p>La page Projects permet de créer un tableau pour réaliser des méthodes agiles. Vous pouvez vous organiser avec les autres membres de votre équipe directement depuis l'application GitHub.</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-8 col-lg-6 text-center">
+                <h4>5. Wiki</h4>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-8 col-lg-9 text-center">
+                <img src="img/Wiki.png" alt="Wiki d'un projet GitHub" class="img-fluid mx-auto d-block" style="max-width: 860px;">
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-8 col-lg-6 text-justify">
+                <p>Vous pouvez utiliser le wiki de votre dépôt afin de partager du contenu détaillé sur votre projet, par exemple pour décrire son utilisation, sa conception ou ses principes de base.</p>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
     <footer>
-        <p>&copy; 2024 Noah&Antony, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-    </footer>
+        <p>&copy; 2024 Noah & Antony, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>   
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
